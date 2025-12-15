@@ -1,0 +1,3 @@
+vamos a usar un get en la url con la ubicación de nuestra ciudad, obteniendo la información deseada para que consuman los componentes
+cuando esta  cargando la información mostrar los elementos con la pantalla de carga
+configurar vista de error y de not found

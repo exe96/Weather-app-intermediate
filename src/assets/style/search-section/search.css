@@ -1,0 +1,79 @@
+    .search-section {
+      
+        margin-bottom: var(--spacing-600);
+        width: 100%;
+    }
+    .search-section form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search-suggest{
+        font-size: var(--preset-7-size);
+        top: 60px;
+        left: 0;
+        position:absolute;
+        margin-top: var(--spacing-100);
+        background-color: var(--Neutral-800);
+        list-style: none;
+        display: none;
+        width: 100%;
+        max-width: 526px;
+        max-height: 184px;
+        overflow-y: auto;
+        scrollbar-color: var(--Neutral-800) var(--Neutral-600);
+        border-radius: var(--radius-12);
+        padding: var(--spacing-100);
+    }
+    .search-suggest.active {
+        display: block;
+    }
+ .search-suggest li:hover{
+    padding: var(--spacing-100);
+    background-color: var(--Neutral-700);
+    border: groove 1px solid var(--Neutral-600);
+    border-radius: var(--radius-8);
+    cursor: pointer;
+ }
+ .search-suggest li{
+    padding: var(--spacing-100);
+ }
+    .input-search{
+        position: relative;
+        height: 56px;
+        background-color: var(--Neutral-800);
+        border-radius: var(--radius-12);
+        display: flex;
+        align-items: center;
+        padding: var(--spacing-200) var(--spacing-300);
+        width: 100%;
+        max-width: 526px;
+    }
+    #search{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        margin-left: var(--spacing-200);
+        color: var(--Neutral-200);
+        font-size: var(--preset-5m-size);
+        line-height: var(--preset-5m-line-height);
+        width: 100%;
+    }
+    #search::placeholder{
+        color: var(--Neutral-200);
+        font-size: var(--preset-5m-size);
+        line-height: var(--preset-5m-line-height);
+        
+    }
+    .btn-search-submit{
+        width: 114px;
+        height: 56px;
+        margin-left: var(--spacing-200);
+        border: none;
+        outline: none;
+        border-radius: var(--radius-12);
+        background-color: var(--Blue-500);
+        font-size: var(--preset-5m-size);
+        color: var(--Neutral-0);
+    }

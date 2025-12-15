@@ -1,0 +1,194 @@
+:root {
+    /*default color app*/
+
+    --Neutral-900:#02012C;
+    --Neutral-800: #262540;
+    --Neutral-700:#302F4A; 
+    --Neutral-600: #3C3B5E; 
+    --Neutral-300:#ACACB7; 
+    --Neutral-200:#D4D3D9;
+    --Neutral-0:#FFFFFF;        
+    --Orange-500:  #FF820A;   
+    --Blue-500: #4658D9;
+    --Blue-700: #2B1B9C; 
+    color: rgba(255, 255, 255, 0.87);         
+    background-color: #242424;
+    
+
+    /* Typography weights */
+    --weight-light: 300;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700; 
+/* Typography families */
+    --font-dm: 'DM Sans',system-ui, sans-serif;
+    --font-bricolage: 'Bricolage Grotesque',system-ui, sans-serif;
+    --font-family-base: var(--font-dm);
+    /*Typography*/
+    --font-size-base: 16px;
+    --style-normal: normal;
+    --style-italic: italic;
+    --letter-spacing-normal: 0;
+    --letter-spacing-negative: -0.125rem; /*-2px*/
+    --line-height-normal: 120%;
+    --line-height-tight: 100%;
+    /*Text Preset 1 DM Sans, SemiBold Italic*/
+    /*letter-spacing*/
+    --preset-1-letter-spacing:var(--letter-spacing-negative);/*-2px*/
+    /*Typography line-height*/
+    --preset-1-line-height:var(--line-height-tight);
+    /*Typography weight*/
+    --preset-1-weight:var(--weight-semibold);
+    /*Typography style*/
+    --preset-1-style:var(--style-italic);
+    /*Typography sizing*/
+    --preset-1-size:6rem;  
+    --preset-1-family: var(--font-dm);
+
+    /*Text Preset 2 Bricolage Grotesque, Bold */
+    /*letter-spacing*/
+    --preset-2-letter-spacing:var(--letter-spacing-normal);
+    /*Typography line-height*/
+    --preset-2-line-height:var(--line-height-normal);
+    /*Typography weight*/
+    --preset-2-weight:var(--weight-bold);
+    /*Typography style*/
+    --preset-2-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-2-size:3.25rem;/*52px*/
+    --preset-2-family: var(--font-bricolage);
+
+    /* Preset 3 - DM Sans, Light */
+    /*letter-spacing*/
+    --preset-3-letter-spacing:var(--letter-spacing-normal);
+    /*Typography line-height*/
+    --preset-3-line-height:var(--line-height-tight);
+    /*Typography weight*/
+    --preset-3-weight:var(--weight-light);
+    /*Typography style*/
+    --preset-3-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-3-size:2rem;/*32px*/
+    --preset-3-family: var(--font-dm);
+    
+    
+/* Preset 4 - DM Sans, Bold */
+    /*letter-spacing*/
+    --preset-4-letter-spacing:var(--letter-spacing-normal);
+    /*Typography line-height*/
+    --preset-4-line-height:var(--line-height-normal);
+    /*Typography weight*/
+    --preset-4-weight:var(--weight-bold);
+    /*Typography style*/
+    --preset-4-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-4-size:1.75rem;/*28px*/
+    --preset-4-family: var(--font-dm);
+
+    /* Preset 5 - DM Sans, SemiBold */
+    /*letter-spacing*/
+    --preset-5-letter-spacing:var(--letter-spacing-normal);
+    
+    /*Typography line-height*/
+    --preset-5-line-height:var(--line-height-normal);
+    /*Typography weight*/
+    --preset-5-weight   :var(--weight-semibold);
+    /*Typography style*/
+    --preset-5-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-5-size:1.25rem;/*20px*/
+    --preset-5-family: var(--font-dm);
+
+    /* Preset 5 Medium - DM Sans, Medium */
+    /*letter-spacing*/
+    --preset-5m-letter-spacing:var(--letter-spacing-normal);
+    /*Typography line-height*/
+    --preset-5m-line-height:var(--line-height-normal);
+    /*Typography weight*/
+    --preset-5m-weight:var(--weight-medium);
+    /*Typography style*/
+    --preset-5m-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-5m-size:1.25rem;/*20px*/
+    --preset-5m-family: var(--font-dm);
+
+
+    /* Preset 6 - DM Sans, Medium */
+    /*letter-spacing*/
+    --preset-6-letter-spacing:var(--letter-spacing-normal);
+    /*Typography line-height*/
+    --preset-6-line-height:var(--line-height-normal);
+    /*Typography weight*/
+    --preset-6-weight:var(--weight-medium);
+    /*Typography style*/
+    --preset-6-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-6-size:1.125rem;/*18px*/
+    --preset-6-family: var(--font-dm);
+
+
+    /* Preset 7 - DM Sans, Medium */
+    /*letter-spacing*/
+    --preset-7-letter-spacing:var(--letter-spacing-normal);
+    /*Typography line-height*/
+    --preset-7-line-height:var(--line-height-normal);
+    /*Typography weight*/
+    --preset-7-weight:var(--weight-medium);
+    /*Typography style*/
+    --preset-7-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-7-size:1rem;/*16px*/
+    --preset-7-family: var(--font-dm);
+
+    /* Preset 8 - DM Sans, Medium */
+    /*letter-spacing*/
+    --preset-8-letter-spacing:var(--letter-spacing-normal);
+    /*Typography line-height*/
+    --preset-8-line-height:var(--line-height-normal);
+    /*Typography weight*/
+    --preset-8-weight:var(--weight-medium);
+    /*Typography style*/
+    --preset-8-style:var(--style-normal);
+    /*Typography sizing*/
+    --preset-8-size:0.875rem;/*14px*/
+    --preset-8-family: var(--font-dm);
+
+
+
+
+    /*Typography spacing*/
+    --spacing-0: 0; /*0px*/
+    --spacing-025: 0.125rem; /*2px*/
+    --spacing-050: 0.25rem; /*4px*/
+    --spacing-075: 0.375rem; /*6px*/
+    --spacing-100: 0.5rem; /*8px*/
+    --spacing-125: 0.625rem; /*10px*/
+    --spacing-150: 0.75rem; /*12px*/
+    --spacing-200: 1rem; /*16px*/
+    --spacing-250: 1.25rem; /*20px*/
+    --spacing-300: 1.5rem; /*24px*/
+    --spacing-400: 2rem; /*32px*/
+    --spacing-500: 2.5rem; /*40px*/
+    --spacing-600: 3rem; /*48px*/
+    --spacing-800: 4rem; /*64px*/
+    --spacing-1000: 5rem; /*80px*/
+    --spacing-1200: 6rem; /*96px*/
+    --spacing-1400: 7rem; /*112px*/
+    --spacing-1600: 8rem; /*128px*/
+    --spacing-1800: 8.75rem; /*140px*/
+
+    /*border-radius */
+    --radius-0: 0;
+    --radius-4: 4px;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-10: 10px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-20: 20px;
+    --radius-24: 24px;
+    --radius-full: 9999px;
+
+
+
+}

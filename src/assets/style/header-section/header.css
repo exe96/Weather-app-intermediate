@@ -1,0 +1,10 @@
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-600);
+}
+
+.options-menu-units{
+    display: none;
+}
