@@ -20,12 +20,14 @@ const listRef = useRef(null);
 const { setLoadingWeather } = useContext(UserContext);      
 const { setCityData } = useContext(UserContext);
 const { setWeatherData } = useContext(UserContext);
+const { switchUnits } = useContext(UserContext);
+const { setError } = useContext(UserContext);
     HandleQuery({query, setResults, setIsOpen, setLoading});
     return (
         <>
           <div className="search-section">
             <form  ref={formRef} onSubmit={
-                (event) => HandleSubmit({event, setLoadingWeather,setWeatherData})} method="get">
+                (event) => HandleSubmit({event, setLoadingWeather, setWeatherData, switchUnits, setError})} method="get">
                 <div className="input-search">
                     <label htmlFor="search"><picture><img src={iconsSystem.iconSearch.src} alt={iconsSystem.iconSearch.name} /></picture></label>
                     <input type="text" autoComplete='off' name="search" id="search" placeholder="Search for a places..." 
@@ -68,7 +70,7 @@ const { setWeatherData } = useContext(UserContext);
                             </span>
                         </div>
                         <span className="city-coords">
-                            📍 {city.latitude.toFixed(2)}°, {city.longitude.toFixed(2)}°
+                            📍 {city?.latitude.toFixed(2)}°, {city?.longitude.toFixed(2)}°
                         </span>
                     </li>
                         ))

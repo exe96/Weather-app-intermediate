@@ -12,8 +12,14 @@ const HandleQuery = ({query, setResults, setIsOpen, setLoading}) => {
     
             const timer = setTimeout(async () => {
                 setLoading(true);
-                const cities = await SearchCities(normalized); 
-                console.log('Cities found in HandleQuery:', cities);
+                const cities = await SearchCities(normalized);
+                if(!cities ||cities.length === 0){
+                    console.warn('No cities found');
+                    setLoading(false);
+                    return;
+                    
+                }
+            
                 setResults(cities);
                 setIsOpen(cities.length > 0);
                 setTimeout(() =>

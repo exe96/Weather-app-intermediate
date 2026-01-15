@@ -22,10 +22,34 @@
         max-width: 526px;
         max-height: 184px;
         overflow-y: auto;
-        scrollbar-color: var(--Neutral-800) var(--Neutral-600);
+        /*color de la barra de desplazamiento*/
+       /*  scrollbar-color: var(--Neutral-800) var(--Neutral-600); */
         border-radius: var(--radius-12);
         padding: var(--spacing-100);
     }
+    /* Solo aplica en navegadores que soporten scrollbar-color (Firefox) */
+@supports (scrollbar-color: auto) {
+    .search-suggest {
+        
+        scrollbar-color: var(--Neutral-700) transparent;
+    }
+}
+.search-suggest::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track (fondo) */
+.search-suggest::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb (barrita que se mueve) */
+.search-suggest::-webkit-scrollbar-thumb {
+  background-color: var(--Neutral-600);
+  border-radius: 12px;
+}
+
+
     .search-suggest.active {
         display: block;
     }
@@ -62,8 +86,13 @@
     }
     #search::placeholder{
         color: var(--Neutral-200);
+        
         font-size: var(--preset-5m-size);
+        font-weight: var(--preset-5m-weight);
+        letter-spacing: var(--preset-5m-letter-spacing);
         line-height: var(--preset-5m-line-height);
+        font-family: var(--preset-5m-family);
+        font-style: var(--preset-5m-style);
         
     }
     .btn-search-submit{
@@ -75,5 +104,23 @@
         border-radius: var(--radius-12);
         background-color: var(--Blue-500);
         font-size: var(--preset-5m-size);
+        font-weight: var(--preset-5m-weight);
+        letter-spacing: var(--preset-5m-letter-spacing);
+        line-height: var(--preset-5m-line-height);
+        font-family: var(--preset-5m-family);
+        font-style: var(--preset-5m-style);
+        text-align: center;
+        color: var(--Neutral-0);
+        cursor: pointer;
+    }
+
+    .search-first{
+        font-size: var(--preset-4-size);
+        font-weight: var(--preset-4-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+        font-family: var(--preset-4-family);
+        font-style: var(--preset-4-style);
+        text-align: center;
         color: var(--Neutral-0);
     }

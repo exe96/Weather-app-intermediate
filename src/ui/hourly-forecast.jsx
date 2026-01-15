@@ -52,8 +52,6 @@ const HourlyForecast = ({selectedDay,setSelectedDay,weatherData,iconWeather}) =>
                                         {weatherData?.hourly?.time.slice(indexOfDay[selectedDay], indexOfDay[selectedDay] + 24).map((time, index) => {  
                                                     const weather_code= weatherData?.hourly.weather_code.slice(indexOfDay[selectedDay], indexOfDay[selectedDay] + 24);
                                                     const temperature= weatherData?.hourly.temperature_2m.slice(indexOfDay[selectedDay], indexOfDay[selectedDay] + 24);
-                                                console.log('Processing hourly data for index:', index);
-                                                console.log('time Data :', time);
                                                 const displayHour = new Intl.DateTimeFormat('en-US', {
                                                     hour: 'numeric',
                                                     hour12: true,

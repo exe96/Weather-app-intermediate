@@ -5,12 +5,37 @@ min-height: 100dvh;
 padding-right: 24px;
 padding-left: 24px;
 }
-.title-h1 {
-  /* font-size: 2.5rem; */
-text-align: center;
-margin-top: var(--spacing-800);
-margin-bottom: var(--spacing-800);
+
+.h1-title-App{
+   
+    text-align: center;
+    color: var(--Neutral-0);
+    margin-top: var(--spacing-800);
+    margin-bottom: var(--spacing-800);
+        font-size: var(--preset-2-size);
+        font-weight: var(--preset-2-weight);
+        letter-spacing: var(--preset-2-letter-spacing);
+        line-height: var(--preset-2-line-height);
+        font-family: var(--preset-2-family);
+        font-style: var(--preset-2-style);
+    
 }
 footer{
     min-height: 80px;
+    text-align: center;
+    color: var(--Neutral-0);
+    
+}
+
+@media (max-width: 540px) {
+    .App {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+@media(max-width: 338px){
+    .App {
+        padding-right: 2px;
+        padding-left: 2px;
+    }
 }

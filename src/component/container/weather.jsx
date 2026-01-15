@@ -23,9 +23,19 @@ const Weather = () => {
     const city = cityData?.admin3 ||cityData?.admin2 || 'Unknown City';
     const country = cityData?.country || 'Unknown Country';
     const department = cityData?.admin1 || 'Unknown Department';
-    const today = new Date().getDate();
-    const month = new Date().getMonth() + 1;
-    const year = new Date().getFullYear();
+   // Obtener la fecha actual del weatherData
+    const currentDate = weatherData?.current?.time 
+        ? new Date(weatherData.current.time) 
+        : new Date();
+
+    // Formatear la fecha: "Tuesday, Aug 5, 2025"
+    const formattedDate = new Intl.DateTimeFormat('en-US', {
+        weekday: 'long',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        timeZone: weatherData?.timezone ?? 'UTC'
+    }).format(currentDate);
     const units = weatherData?.current_units || {
         windSpeed: 'kmh',
         precipitation: 'mm'
@@ -46,9 +56,9 @@ const [selectedDay,setSelectedDay] = useState(0);
     
     return (
         <div className="main-section">
-        <section className="current-weather">
+        <section className="current-weather"> 
 
-            <SectionMain city={city} department={department} country={country} today={today} month={month} year={year} iconWeather={{name, url}} temperature={currentTemperature}>   </SectionMain>
+            <SectionMain city={city} department={department} country={country} formattedDate={formattedDate} iconWeather={{name, url}} temperature={currentTemperature}>   </SectionMain>
             
             <SecondMain feelsLike={weatherData?.current?.apparent_temperature} humidity={weatherData?.current?.relative_humidity_2m} windSpeed={weatherData?.current?.wind_speed_10m} precipitation={weatherData?.current?.precipitation} units={units} ></SecondMain>
     

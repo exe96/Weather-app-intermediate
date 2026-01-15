@@ -1,11 +1,11 @@
 
-const SectionMain = ({city,department,country,today,month,year,iconWeather,temperature}) => {
+const SectionMain = ({city,department,country,formattedDate,iconWeather,temperature}) => {
     return (
             
                 <article className="main-weather">
                     <div>
-                        <h2>{city}, {department}, {country}</h2>    
-                        <p>{today},{month},{year}</p>
+                        <h2 className="main-weather-h2">{city}{/*, {department} */}, {country}</h2>    
+                        <p className="main-weather-date-p">{formattedDate}</p>
                     </div>
                     <div className="weather-temp">
                         <picture className="weather-temp-picture">

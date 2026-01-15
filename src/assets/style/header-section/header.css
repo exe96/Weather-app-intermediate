@@ -1,3 +1,4 @@
+
 header nav{
     display: flex;
     justify-content: space-between;
@@ -5,6 +6,99 @@ header nav{
     padding-top: var(--spacing-600);
 }
 
+.weather-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    background-color: var(--Neutral-800);
+    width: 119px;
+    height: 43px;
+    border-radius: var(--radius-8);
+}
+.weather-options-span{
+        font-size: var(--preset-7-size);
+        font-weight: var(--preset-7-weight);
+        letter-spacing: var(--preset-7-letter-spacing);
+        line-height: var(--preset-7-line-height);
+        font-family: var(--preset-7-family);
+        font-style: var(--preset-7-style);
+        text-align: center;
+        color: var(--Neutral-0);
+}
 .options-menu-units{
     display: none;
+    position: absolute;
+    
+    right: 0;
+    width: 100%;
+    max-width: 214px;
+    min-width: 214px;
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+
+    padding: var(--spacing-100) var(--spacing-075);
+    border-radius: var(--radius-12);
+    margin-top: 10px;
+    z-index: 100;
+}
+.options-menu-units-active{
+    display: flex;
+    flex-direction: column;
+   
+}
+    
+.menu{
+    list-style: none;
+    margin-top: var(--spacing-075);
+}
+.options-menu-units hr{
+    border: 1px solid var(--Neutral-600);
+}
+.menu li{
+    width: 198px;
+padding: var(--spacing-100)  var(--spacing-075);
+border-radius: var(--radius-8);}
+.select{
+    position: relative;
+}
+.option-selected-celsius{
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-100);
+}
+.option-selected-fahrenheit{
+    background-color: var(--Neutral-700);
+   
+}
+.title-temperature {
+    color: var(--Neutral-300);
+}
+.title-wind-speed {
+    color: var(--Neutral-300);
+}
+.title-precipitation {
+    color: var(--Neutral-300);
+}
+.btn-menu-units{
+    background-color: transparent;
+    border: none;
+    color: var(--Primary-300);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: var(--preset-7);
+    margin-bottom: var(--spacing-125);
+}
+
+.option-selected-kmh{
+    background-color: var(--Neutral-700);
+}
+.option-selected-mph{
+    background-color: var(--Neutral-700);
+}
+.option-selected-mm{
+    background-color: var(--Neutral-700);
+}
+.option-selected-in{
+    background-color: var(--Neutral-700);
 }
