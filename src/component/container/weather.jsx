@@ -10,16 +10,10 @@ import { useState } from "react";
 
 const Weather = () => {
     const { weatherData, cityData } = useContext(UserContext); 
-    console.log('Weather Data:');
-    console.log(weatherData); 
-    console.log('Current Weather Data:');
-    console.log(weatherData?.current);  
-    console.log('City Data:');
-    console.log(cityData);
+   
    const code = weatherData?.current?.weather_code;
     const { name, url } = iconWeatherSvg[code] ?? iconWeatherSvg[0];
     const currentTemperature = weatherData?.current?.temperature_2m ?? '--';
-    console.log('Current Temperature:', currentTemperature);
     const city = cityData?.admin3 ||cityData?.admin2 || 'Unknown City';
     const country = cityData?.country || 'Unknown Country';
     const department = cityData?.admin1 || 'Unknown Department';
@@ -52,7 +46,6 @@ const Weather = () => {
 const [selectedDay,setSelectedDay] = useState(0);
 
 
-    console.log('Daily Days:', dailyDays);
     
     return (
         <div className="main-section">

@@ -12,8 +12,8 @@ export default defineConfig({
       babel: {
         plugins: [['babel-plugin-react-compiler']],
       },
-    }),
-  ],
+    }), 
+  ],base: "/Weather-app-intermediate/",
    resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
